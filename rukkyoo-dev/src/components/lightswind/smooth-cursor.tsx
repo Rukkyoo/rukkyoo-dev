@@ -1,7 +1,8 @@
 "use client";
 
 import { motion, useSpring } from "framer-motion";
-import { FC, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import type { FC } from "react";
 // Utility function 'cn' (classnames) - implemented directly to resolve import error
 function cn(...inputs: (string | undefined | null | boolean)[]) {
   return inputs.filter(Boolean).join(" ");
@@ -129,9 +130,9 @@ export function SmoothCursor({
   onCursorLeave,
   disabled = false,
 }: SmoothCursorProps) {
-  const [isMoving, setIsMoving] = useState(false);
+  const [, setIsMoving] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
-  const [isClicking, setIsClicking] = useState(false);
+  const [, setIsClicking] = useState(false);
   const [trail, setTrail] = useState<Position[]>([]);
 
   const lastMousePos = useRef<Position>({ x: 0, y: 0 });

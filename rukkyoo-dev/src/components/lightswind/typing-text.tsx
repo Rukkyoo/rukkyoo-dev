@@ -31,7 +31,6 @@ export const TypingText = ({
   color = "text-white",
   letterSpacing = "tracking-wide",
   align = "left",
-  loop = false,
 }: TypingTextProps) => {
   const [textContent, setTextContent] = useState<string>("");
 
